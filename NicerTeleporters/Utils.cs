@@ -1,4 +1,5 @@
 ﻿using GameNetcodeStuff;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace NicerTeleporters
 {
+    // This class contains shared methods.
     internal class Utils
     {
         internal static void dropMostHeldItems(ref PlayerControllerB __instance, bool itemsFall = true, bool disconnecting = false)
@@ -81,8 +83,8 @@ namespace NicerTeleporters
             __instance.twoHanded = false;
             __instance.carryWeight = 1f;
             __instance.currentlyHeldObjectServer = null;
+
         }
-        
 
     }
 }
