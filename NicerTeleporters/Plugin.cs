@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace NicerTeleporters
 {
+    // Patches all changes.
     [BepInPlugin(modGUID, modName, modVersion)]
     public class NicerTeleportersBase : BaseUnityPlugin
     {
@@ -16,7 +17,7 @@ namespace NicerTeleporters
         public const string modName = "NicerTeleporters";
         public const string modVersion = "1.0.0";
 
-    
+
 
         private readonly Harmony harmony = new Harmony(modGUID);
         private static NicerTeleportersBase instance;

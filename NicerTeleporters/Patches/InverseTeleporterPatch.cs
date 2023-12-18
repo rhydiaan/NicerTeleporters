@@ -11,9 +11,21 @@ using UnityEngine;
 
 namespace NicerTeleporters.Patches
 {
+    // This class controls all behaviour changes to do with the inverse teleporter.
     [HarmonyPatch]
     internal class InverseTeleporterPatch
     {
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(ShipTeleporter), "Awake")]
+        private static void Awake(ShipTeleporter __instance)
+        {
+            if (__instance.isInverseTeleporter)
+            {
+                __instance.cooldownAmount = 45f;
+            }
+        }
+
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ShipTeleporter), "TeleportPlayerOutWithInverseTeleporter")]
         static bool inverseTeleport(int playerObj, ref Vector3 teleportPos, ShipTeleporter __instance)
@@ -57,9 +69,10 @@ namespace NicerTeleporters.Patches
                 Debug.Log("Teleporter shaking camera");
                 HUDManager.Instance.ShakeCamera(ScreenShakeType.Big);
             }
-            
+
             return false;
         }
 
     }
+
 }
