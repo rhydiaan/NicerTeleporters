@@ -66,6 +66,7 @@
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patches\CommonPatch.cs" />
     <Compile Include="Patches\InverseTeleporterPatch.cs" />
     <Compile Include="Patches\TeleporterPatch.cs" />
     <Compile Include="Plugin.cs" />
