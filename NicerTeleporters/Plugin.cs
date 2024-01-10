@@ -15,7 +15,7 @@ namespace NicerTeleporters
     {
         public const string modGUID = "MV.NicerTeleporters";
         public const string modName = "NicerTeleporters";
-        public const string modVersion = "1.1.0";
+        public const string modVersion = "1.1.1";
 
 
 
