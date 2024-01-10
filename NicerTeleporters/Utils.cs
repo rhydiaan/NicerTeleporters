@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace NicerTeleporters
 {
@@ -17,15 +18,19 @@ namespace NicerTeleporters
 
             MethodInfo SetSpecialGrabAnimationBool = typeof(PlayerControllerB).GetMethod("SetSpecialGrabAnimationBool", BindingFlags.NonPublic | BindingFlags.Instance);
 
+            float keptItemsWeight = 1f;
+
             for (int i = 0; i < __instance.ItemSlots.Length; i++)
             {
                 GrabbableObject grabbableObject = __instance.ItemSlots[i];
+                
                 if (grabbableObject != null)
                 {
                     List<string> keepList = new List<string> { "Shovel", "WalkieTalkie", "KeyItem", "FlashlightItem", "BoomboxItem" };
 
                     if (keepList.Contains(grabbableObject.GetType().ToString()))
                     {
+                        keptItemsWeight += Mathf.Clamp(grabbableObject.itemProperties.weight - 1f, 0f, 10f);
                         continue;
                     }
 
@@ -66,6 +71,7 @@ namespace NicerTeleporters
                         HUDManager.Instance.ClearControlTips();
                         __instance.activatingItem = false;
                     }
+
                     __instance.ItemSlots[i] = null;
                 }
             }
@@ -80,10 +86,10 @@ namespace NicerTeleporters
                 __instance.playerBodyAnimator.SetTrigger("Throw");
             }
             __instance.activatingItem = false;
+            __instance.carryWeight = keptItemsWeight;
             __instance.twoHanded = false;
-            __instance.carryWeight = 1f;
             __instance.currentlyHeldObjectServer = null;
-
+            
         }
 
     }
