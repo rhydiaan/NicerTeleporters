@@ -1,11 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NicerTeleporters
 {
@@ -15,7 +10,7 @@ namespace NicerTeleporters
     {
         public const string modGUID = "MV.NicerTeleporters";
         public const string modName = "NicerTeleporters";
-        public const string modVersion = "1.1.1";
+        public const string modVersion = "1.1.2";
 
 
 
