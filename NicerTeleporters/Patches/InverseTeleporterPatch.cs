@@ -46,7 +46,7 @@ namespace NicerTeleporters.Patches
             PlayerControllerB playerControllerB = StartOfRound.Instance.allPlayerScripts[playerObj];
             SetPlayerTeleporterId.Invoke(__instance, new object[] { playerControllerB, -1 });
 
-            Utils.dropMostHeldItems(ref playerControllerB, true, false);
+            Utils.DropMostHeldItems(ref playerControllerB, true, false);
 
             if ((bool)UnityEngine.Object.FindObjectOfType<AudioReverbPresets>())
             {
