@@ -18,7 +18,7 @@ A lethal company mod that makes teleporters a little bit nicer :)
 - Copy into the following directory: `\{GAME_LOCATION}\Lethal Company\BepInEx\plugins`
 
 ### Automatic
-- Install via [r2modman](https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/) (Recommended) or [Thunderstore Mod Manager](https://www.overwolf.com/oneapp/thunderstore-mod-manager)
+- Install via [r2modman](https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/) (Recommended) or [Thunderstore Mod Manager](https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager)
 
 ## Change list
 ### v1.1.2
