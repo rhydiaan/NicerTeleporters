@@ -102,7 +102,7 @@ namespace NicerTeleporters.Patches
             else
             {
                 flag = true;
-                Utils.dropMostHeldItems(ref playerToBeamUp, true, false);
+                Utils.DropMostHeldItems(ref playerToBeamUp, true, false);
                 if ((bool)UnityEngine.Object.FindObjectOfType<AudioReverbPresets>())
                 {
                     UnityEngine.Object.FindObjectOfType<AudioReverbPresets>().audioPresets[3].ChangeAudioReverbForPlayer(playerToBeamUp);

@@ -13,7 +13,7 @@ namespace NicerTeleporters
     // This class contains shared methods.
     internal class Utils
     {
-        internal static void dropMostHeldItems(ref PlayerControllerB __instance, bool itemsFall = true, bool disconnecting = false)
+        internal static void DropMostHeldItems(ref PlayerControllerB __instance, bool itemsFall = true, bool disconnecting = false)
         {
 
             MethodInfo SetSpecialGrabAnimationBool = typeof(PlayerControllerB).GetMethod("SetSpecialGrabAnimationBool", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -26,7 +26,7 @@ namespace NicerTeleporters
 
                 if (grabbableObject != null)
                 {
-                    List<string> keepList = new List<string> { "Shovel", "WalkieTalkie", "KeyItem", "FlashlightItem", "BoomboxItem" };
+                    List<string> keepList = new List<string> { "Shovel", "WalkieTalkie", "KeyItem", "FlashlightItem", "BoomboxItem", "RadarBoosterItem" };
 
                     if (keepList.Contains(grabbableObject.GetType().ToString()))
                     {
